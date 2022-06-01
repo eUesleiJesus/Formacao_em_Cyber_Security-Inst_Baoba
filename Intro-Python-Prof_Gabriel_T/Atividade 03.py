@@ -1,15 +1,18 @@
-import mean on statistics
+# ****Atividade 3****
 
-list =  [1, 2, 3, 4, 5, 6]
-mean = statistics.mean(list)
-print(mean)
+## Façam um Programa que peça as 4 notas bimestrais e mostre a média.
 
+### --- Programa
 
-#notas_str = input("Informe as quatros notas: ")
-#notas_int = [int(i) for i in notas_str]
-#nota = 0
+def fun_not():
+    Notas_str = input("Informe as 4 notas do Aluno: ").split()
 
-##for i in range(4):
-    #nota += notas_int[i]
+    if len(Notas_str) != 4:
+        fun_not()
 
-#(nota/4)
+    Notas_num = [int(string) for string in Notas_str]
+    soma = sum(Notas_num)
+    media = soma/(len(Notas_num))
+    print(f"A media do aluno e: {media}")
+
+fun_not()
