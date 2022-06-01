@@ -12,7 +12,6 @@ def fun_num():
 
     if len(num_str) != 3:
         fun_num()
-        clear.()
 
     num_num = [float(string) for string in num_str]
 
