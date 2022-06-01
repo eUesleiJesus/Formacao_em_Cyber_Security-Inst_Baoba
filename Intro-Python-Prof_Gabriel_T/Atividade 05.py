@@ -6,15 +6,15 @@
 
 ### --- Programa
 
-def lucro():
-    val_str = input("Informe ao faturamento e o custo: ").split()
+def fun_lucro():
+    val_str = input("Informe o faturamento e o custo: ").split()
 
-    if len(Notas_str) != 2:
-        fun_not()
+    if len(val_str) != 2:
+        fun_lucro()
 
-    Notas_num = [int(string) for string in Notas_str]
-    soma = sum(Notas_num)
-    media = soma/(len(Notas_num))
-    print(f"A media do aluno e: {media}")
+    val_num = [int(string) for string in val_str]
+    lucro = val_num[0] - val_num[1]
+    margem = lucro / val_num[0]
+    print(f" O Lucro foi de: {lucro:.2f}$, e a margem foi de: {margem:.2%}")
 
-fun_not()
+fun_lucro()
