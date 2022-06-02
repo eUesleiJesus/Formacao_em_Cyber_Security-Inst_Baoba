@@ -9,19 +9,46 @@
 # - 4- Divisão entre 2 números (o denominador não pode ser zero).
 # - dica vocês podem pular a linha em um print usando \n
 
-def soma():
-    list = input("Informe o dois numeros: ").split()
-    val_num = [int(string) for string in list]
-    sum = val_num[0] + al_num[1]
-    print(f" a soma de {val_num[0]} + {val_num[1]} e igual a {sum}")
+def invalido():
+    print("Err0!")
+    main()
 
-def diferenca():
+def convert(lista):
+    lista = lista
+    val_num = [int(string) for string in lista]
+    return val_num
 
-def produto():
+def soma(lista):
+    valor = lista
+    valor = valor[0] + valor[1]
+    return valor
 
-def divisao():
+def divisao(lista):
+    valor = lista
 
-def erro():
+    if valor[1] == 0:
+        invalido()
+
+    valor = lista[0] / lista[1]
+
+    return valor
+
+def produto(lista):
+    valor = lista
+    valor = valor[0] * valor[1]
+    return valor
+
+def diferenca(lista):
+
+    valor = lista
+
+    if valor[0] > valor[1]:
+        valor = valor[0] - valor[1]
+    elif valor[0] < valor[1]:
+        valor = valor[1] - valor[0]
+    else:
+        valor = 0
+    return valor
 
 def main():
     menu = int(input("""
@@ -34,14 +61,39 @@ def main():
     """))
 
     if menu == 1:
-        soma()
+        lista = input("Informe os dois numeros: \n").split()
+        valor = convert(lista)
+        soma_valor = soma(valor)
+        print(f" \n A soma de {valor[0]} + {valor[1]} e igual a {soma_valor}")
+
     elif menu == 2:
-        deferenca()
+        lista = input("Informe os dois numeros: \n").split()
+        valor = convert(lista)
+        sub_valor = diferenca(valor)
+
+        if valor[0] > valor[1]:
+             print(f" \n A diferença de {valor[0]} - {valor[1]} e igual a {sub_valor}")
+        elif valor[0] < valor[1]:
+             print(f" \n A diferença de {valor[1]} - {valor[0]} e igual a {sub_valor}")
+        else:
+            print(f" \n A diferença de {valor[1]} - {valor[0]} e igual a {0}")
+
+
     elif menu ==3:
-        produto()
+        lista = input("Informe os dois numeros: \n").split()
+        valor = convert(lista)
+        pro_valor = produto(valor)
+        print(f" \n O Produto de de {valor[0]} X {valor[1]} e igual a {pro_valor}")
+
     elif menu == 4:
-        divisao()
+        lista = input("Informe os dois numeros: ").split()
+        valor = convert(lista)
+        div_valor = divisao(valor)
+        print(f" \n A razao de {valor[0]} por {valor[1]} e igual a {div_valor:.2f}")
+
+
     else :
-        erro()
+        invalido()
 
 main()
+
