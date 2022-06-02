@@ -7,11 +7,11 @@
 
 ### --- Programa
 
-def fun_num():
-    num_str = input("Informe 2 numeros inteiros e 1 numero real: ").split()
+def fun_num(list):
+    num_str = list
 
     if len(num_str) != 3:
-        fun_num()
+        main()
 
     num_num = [float(string) for string in num_str]
 
@@ -22,13 +22,23 @@ def fun_num():
     b = int((num_num[0]*3)) + (num_num[2])
 
     # - o terceiro elevado ao cubo.
-    c = num_num[2]**3
+    c = (num_num[2]**3)
 
-    print(f""" 
-        o produto do dobro do primeiro com metade do segundo: {a}
-        a soma do triplo do primeiro com o terceiro: {b:.2f}
-        o terceiro elevado ao cubo: {c:.2f}
-        """)
+    return a, b, c
 
+def main():
+    list = input("Informe 2 numeros inteiros e 1 numero real: ").split()
 
-fun_num()
+    fun_num(list)
+
+    a, b, c = fun_num(list)
+
+    str01 = f""" 
+            o produto do dobro do primeiro com metade do segundo: {a}
+            a soma do triplo do primeiro com o terceiro: {b:.2f}
+            o terceiro elevado ao cubo: {c:.2f}
+            """
+
+    print(str01)
+
+main()
