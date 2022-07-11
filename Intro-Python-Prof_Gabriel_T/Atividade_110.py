@@ -1,3 +1,4 @@
+"""
 #****Atividade 11****
 #
 # • Façam um programa que pergunte o salário do funcionário e calcule o valor do aumento.
@@ -5,6 +6,7 @@
 #   Para os inferiores ou iguais, de 15%.
 
 salario = float(input("Informe o Salario: "))
+"""
 
 if salario > 1250:
     salario += salario*0.1
