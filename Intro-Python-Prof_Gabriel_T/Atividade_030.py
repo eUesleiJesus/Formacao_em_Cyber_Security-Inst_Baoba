@@ -35,15 +35,18 @@ def main(qnt_not):
 main(qnt_not)
 """
 
-from Atividade_000 import criar_lista_num, mostrar_texto, media
+from A0_Funcao import criar_lista_num, media
 
 def main():
     texto = "Informe as 04 notas bimestrais: ex(10 5 6 8) \n"
-    mostrar_texto(texto)
-    notas = criar_lista_num()
+    notas_str = input(texto)
+
+    notas = criar_lista_num(notas_str)
+
     media_aluno = media(notas)
+
     texto = f"\n A media do aluno é {media_aluno: .2f}"
-    mostrar_texto(texto)
+    print(texto)
 
 main()
 

@@ -7,11 +7,15 @@
 
 Programa
 """
-from Atividade_000 import mostrar_texto, perguntar_num
 
 def main():
-    num = perguntar_num()
-    texto = (f'O número informado foi {num}')
-    mostrar_texto(texto)
+
+    texto = "informe um número: "
+    num = input(texto)
+
+    texto = f"\nO número informado foi {num}"
+
+    print(texto)
+
 main()
 

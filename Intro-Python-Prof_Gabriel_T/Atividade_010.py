@@ -8,6 +8,12 @@ na tela,
  **print().**
 
 """
-from Funcao import printar_texto
+def main():
 
-print("Hello World")
+    text = f"Hello World! \n"
+    print(text)
+
+    text = f"0lá Mundo! \n"
+    print(text)
+
+main()
