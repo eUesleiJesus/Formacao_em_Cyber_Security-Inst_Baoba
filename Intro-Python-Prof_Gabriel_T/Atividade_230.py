@@ -1,0 +1,15 @@
+# ****Atividade 23****
+
+# - Façam um programa que imprima os valores da lista abaixo sem repetição de itens.
+
+lista = [2,3,3,2,3,4,5,6,4,6,7,8,9,33,5,7,8,0,22,44,55,77,55,44,5566,55,3322,22]
+
+x = []
+
+for i in lista:
+    if i not in x:
+        x.append(i)
+
+print(x)
+
+#print(sorted(set(lista)))
